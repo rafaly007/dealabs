@@ -3,7 +3,7 @@
 ```sh
 git clone https://github.com/rafaly007/dealabs.git
 ```
-Install the modules:
+Install the modules (dans le dossier):
 ```sh
 npm install
 ```
