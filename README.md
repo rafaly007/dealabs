@@ -1,3 +1,21 @@
+# Pour voir le resultat du Dealabs:
+# Clone/copy this repo to your local machine:
+```sh
+git clone https://github.com/rafaly007/dealabs.git
+```
+Install the modules:
+```sh
+npm install
+```
+Run the node script
+```sh
+node article-stream.js
+```
+
+Point your browser at: [**http://localhost:5000**](http://localhost:5000)
+Enjoy!
+
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
