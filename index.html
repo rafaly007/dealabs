@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello les dealabers</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style type="text/css">
+      .blue {
+        background: skyblue;
+        height: 500px;
+        
+      }
+      .pink {
+        background: pink;
+        height: 400px;
+      }
+       .yellow {
+        background: yellow;
+        height: 300px;
+      }
+       .black {
+        background: black;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dernier Dealabs</h1>  
+    <div class="container">
+
+                 
+<button type="submit" src="article-stream.js">Cliquez ici</button>
+
+    </div> 
+
+    <script src="/node_modules/rss-parser/dist/rss-parser.min.js"></script>
+    <script>
+     
+    // Note: some RSS feeds can't be loaded in the browser due to CORS security.
+    // To get around this, you can use a proxy.
+    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+     
+    let parser = new RSSParser();
+    parser.parseURL(CORS_PROXY + 'https://www.dealabs.com/rss', function(err, feed) {
+      console.log(feed.title);
+      feed.items.forEach(function(entry) {
+        console.log(entry.title + ':' + entry.link);
+      })
+    })
+     
+    </script> 
+
+    <script>
+      if (typeof module === 'object') {window.module = module; module = undefined;}
+    </script> <!--  (1) il faut l'ajouter pur faire fonctionner avec electron -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      if (window.module) module = window.module;
+    </script> <!--  à ajouter avec (1) -->
+    
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
