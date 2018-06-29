@@ -12,7 +12,8 @@ Run the node script
 node article-stream.js
 ```
 
-Point your browser at: [**http://localhost:5000**](http://localhost:5000)
+Puis lancer dans votre navigateur pour voir le resultat dans dealabs: [**http://localhost:5000**](http://localhost:5000)
+
 Enjoy!
 
 
